@@ -1,2 +1,0 @@
-# mmc
-Microservice Model Core
