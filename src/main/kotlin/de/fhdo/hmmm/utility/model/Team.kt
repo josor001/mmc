@@ -1,18 +1,14 @@
 package de.fhdo.hmmm.utility.model
 
-class Microservice(
-    val name: String,
-    var type: EMicroserviceType? = null,
-    var technology: String? = null,
-    var description: String? = null,
-    var owner: Team? = null,
-    val interfaces: MutableSet<Interface> = mutableSetOf()
+class Team(
+    val name : String,
+    val members: MutableSet<Member> = mutableSetOf()
 ) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false
 
-        other as Microservice
+        other as Team
 
         if (name != other.name) return false
 
