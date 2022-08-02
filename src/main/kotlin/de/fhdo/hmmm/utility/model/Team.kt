@@ -18,4 +18,8 @@ class Team(
     override fun hashCode(): Int {
         return name.hashCode()
     }
+
+    override fun toString(): String {
+        return "Team(name='$name', members=$members)"
+    }
 }

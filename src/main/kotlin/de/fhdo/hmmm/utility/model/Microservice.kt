@@ -2,10 +2,10 @@ package de.fhdo.hmmm.utility.model
 
 class Microservice(
     val name: String,
+    val owner: Team,
     var type: EMicroserviceType? = null,
     var technology: String? = null,
     var description: String? = null,
-    var owner: Team? = null,
     val interfaces: MutableSet<Interface> = mutableSetOf()
 ) {
     override fun equals(other: Any?): Boolean {
@@ -15,11 +15,19 @@ class Microservice(
         other as Microservice
 
         if (name != other.name) return false
+        if (owner != other.owner) return false
 
         return true
     }
 
     override fun hashCode(): Int {
-        return name.hashCode()
+        var result = name.hashCode()
+        result = 31 * result + owner.hashCode()
+        return result
     }
+
+    override fun toString(): String {
+        return "Microservice(name='$name', owner=$owner, type=$type, technology=$technology, description=$description, interfaces=$interfaces)"
+    }
+
 }

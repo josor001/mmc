@@ -22,4 +22,9 @@ class Contract(
         result = 31 * result + consumer.hashCode()
         return result
     }
+
+    override fun toString(): String {
+        return "Contract(owner=$owner, consumer=$consumer, type=$type)"
+    }
+
 }

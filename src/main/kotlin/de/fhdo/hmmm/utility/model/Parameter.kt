@@ -18,4 +18,8 @@ class Parameter(
     override fun hashCode(): Int {
         return name.hashCode()
     }
+
+    override fun toString(): String {
+        return "Parameter(name='$name', type=$type)"
+    }
 }
