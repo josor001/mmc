@@ -3,7 +3,8 @@ package de.fhdo.hmmm.utility.model
 class Microservice(
     val name: String,
     val owner: Team,
-    var type: EMicroserviceType? = null,
+    var comm: CommunicationPattern? = null,
+    var type: MicroserviceType? = null,
     var technology: String? = null,
     var description: String? = null,
     val interfaces: MutableSet<Interface> = mutableSetOf()
@@ -27,7 +28,8 @@ class Microservice(
     }
 
     override fun toString(): String {
-        return "Microservice(name='$name', owner=$owner, type=$type, technology=$technology, description=$description, interfaces=$interfaces)"
+        return "Microservice(name='$name', owner=$owner, communicationPattern=$comm, " +
+                "type=$type, technology=$technology, description=$description, interfaces=$interfaces)"
     }
 
 }

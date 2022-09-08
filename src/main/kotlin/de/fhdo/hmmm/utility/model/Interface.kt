@@ -5,7 +5,7 @@ class Interface(
     //bidirectional link
     provider: Microservice,
     var endpoint : String? = null,
-    var communicationType : String? = null,
+    var comm : CommunicationPattern? = null,
     val operations: MutableSet<Operation> = mutableSetOf()
 ) {
     //Custom Getter/Setter to set bidirectional association
@@ -40,6 +40,7 @@ class Interface(
     }
 
     override fun toString(): String {
-        return "Interface(name='$name', endpoint=$endpoint, communicationType=$communicationType, operations=$operations, provider=omittedDueToCyclicAssociation)"
+        return "Interface(name='$name', endpoint=$endpoint, " +
+                "communicationPattern=$comm, operations=$operations, provider=omittedDueToCyclicAssociation)"
     }
 }

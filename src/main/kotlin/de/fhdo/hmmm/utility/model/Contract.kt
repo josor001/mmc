@@ -3,7 +3,6 @@ package de.fhdo.hmmm.utility.model
 class Contract(
     val owner: Interface,
     val consumer: Microservice,
-    var type : EMessagingType? = null,
 ) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
@@ -24,7 +23,7 @@ class Contract(
     }
 
     override fun toString(): String {
-        return "Contract(owner=$owner, consumer=$consumer, type=$type)"
+        return "Contract(owner=$owner, consumer=$consumer)"
     }
 
 }
