@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>modelCore</artifactId>
+    <artifactId>modelcore</artifactId>
     <groupId>de.fhdo.hmmm.utility</groupId>
     <version>0.2</version>
     <packaging>jar</packaging>
@@ -88,5 +88,12 @@
             <version>1.7.10</version>
         </dependency>
     </dependencies>
-
+    <!-- publication in private repo through GitHub Packages -->
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub josor001 Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/josor001/mmc</url>
+        </repository>
+    </distributionManagement>
 </project>
